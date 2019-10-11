@@ -1,3 +1,6 @@
+//Problem #87 [Hard]
+//This problem was asked by Uber.
+
 A rule looks like this:
 
 A NE B

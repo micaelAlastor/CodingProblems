@@ -4,8 +4,17 @@ console.log('my bare node app');
 
 const wrong1 = ['A N B', 'B NE C', 'C N A'];
 const wrong2 = ['A N B', 'B NE C', 'A S C'];
+const wrong3 = ['A S B', 'B S C', 'C S D', 'D S E', 'E S C', 'E S F'];
 const right1 = ['A NW B', 'A N B'];
 const right2 = ['A NW B', 'C N A', "C NW B"];
+
+function opposite(direction) {
+	if(direction === "N") return "S";
+	if(direction === "S") return "N";
+	if(direction === "E") return "W";
+	if(direction === "W") return "E";
+	return "NOWHERE";
+}
 
 
 function Point(label) {
@@ -14,37 +23,39 @@ function Point(label) {
 
 	this.neighbors = {N:[], S:[], E:[], W:[]};
 	this.path = {N:[], S:[], E:[], W:[]};
-	this.nsIntersec = [];
-	this.ewIntersec = [];
 
 	this.addNeighbor = function(neighbor, direction) {
 		let known = this.neighbors[direction].find((knownNeighbor) => knownNeighbor.label === neighbor.label);
-		if(!known) this.neighbors[direction].push(neighbor);
+		if(!known) {
+			this.neighbors[direction].push(neighbor);
+			neighbor.neighbors[opposite(direction)].push(this);
+		}
 	};
 
 	this.goTo = function(direction){
 		this.path[direction].push(this.label);
-		this.goToFrom(direction, this);
+		this.goToFrom(direction, this, [this.label]);
 	};
 
-	this.goToFrom = function(direction, startPoint){
+	this.goToFrom = function(direction, startPoint, branchPath){
+		//save root for current branch
+		let branchPathRoot = branchPath.slice();
 		this.neighbors[direction].forEach((neighbor)=>{
+			//restore current branch to root
+			branchPath = branchPathRoot.slice();
+			//path can contain start of the loop to clearly indicate invalid ruleset
 			startPoint.path[direction].push(neighbor.label);
-			if(neighbor !== startPoint) {
-				neighbor.goToFrom(direction, startPoint);
-			} else {
+			//checking if current branch has no loops
+			if(!(branchPath.includes(neighbor.label))) {
+				branchPath.push(neighbor.label);
+				console.log(branchPath.join());
+				neighbor.goToFrom(direction, startPoint, branchPath);
+			}
+			else {
 				//so if we see loop we know that something is wrong
 				startPoint.failedDir = direction;
 			}
 		});
-	};
-
-	this.findIntersections = function () {
-		this.nsIntersec = this.path.N.filter(value => this.path.S.includes(value));
-		this.ewIntersec = this.path.E.filter(value => this.path.W.includes(value));
-
-		if(this.nsIntersec.length > 1) this.failedDir = "NS";
-		if(this.ewIntersec.length > 1) this.failedDir = "EW";
 	};
 }
 
@@ -104,13 +115,6 @@ function validate(textRuleArr) {
 			result = false;
 			break;
 		}
-
-		point.findIntersections();
-
-		if(point.failedDir) {
-			result = false;
-			break;
-		}
 	}
 
 	return result;
@@ -120,7 +124,7 @@ function validate(textRuleArr) {
 //testing
 let a, b, c;
 //
-
+console.log('rules are: ' + wrong1.join());
 let w1Points = parse(wrong1);
 assert.equal(w1Points.length, 3);
 a = w1Points.find((point) => point.label === "A");
@@ -129,6 +133,7 @@ assert.equal(a.path.N.length, 4);
 assert.equal(a.path.N.join(), "A,C,B,A");
 assert.equal(a.failedDir, "N");
 //
+console.log('rules are: ' + wrong2.join());
 let w2Points = parse(wrong2);
 assert.equal(w2Points.length, 3);
 c = w2Points.find((point) => point.label === "C");
@@ -136,14 +141,21 @@ c.goTo('N');
 c.goTo('S');
 c.goTo('W');
 c.goTo('E');
-assert.equal(c.path.N.length, 3);
-assert.equal(c.path.N.join(), "C,B,A");
-assert.equal(c.path.S.length, 2);
-assert.equal(c.path.S.join(), "C,A");
-assert.equal(c.failedDir, "");
-c.findIntersections();
-assert.equal(c.failedDir, "NS");
+assert.equal(c.path.N.length, 4);
+assert.equal(c.path.N.join(), "C,B,A,C");
+assert.equal(c.path.S.length, 4);
+assert.equal(c.path.S.join(), "C,A,B,C");
+assert.equal(c.failedDir, "S");
 //
+console.log('rules are: ' + wrong3.join());
+let w3Points = parse(wrong3);
+assert.equal(w3Points.length, 6);
+f = w3Points.find((point) => point.label === "F");
+f.goTo('S');
+assert.equal(f.path.S.length, 7);
+assert.equal(f.failedDir, "S");
+//
+console.log('rules are: ' + right2.join());
 let r2Points = parse(right2);
 assert.equal(r2Points.length, 3);
 a = r2Points.find((point) => point.label === "A");
@@ -164,6 +176,7 @@ assert.equal(c.path.N.length, 1);
 assert.equal(c.path.N.join(), "C");
 assert.equal(c.failedDir, "");
 //
+console.log('rules are: ' + right1.join());
 assert.equal(parse(right1).length, 2);
 
 
