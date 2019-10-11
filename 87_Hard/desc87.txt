@@ -21,3 +21,5 @@ does not validate, since A cannot be both north and south of C.
 A NW B
 A N B
 is considered valid.
+
+//Resume: ~2 hours. It's really not very ez.
