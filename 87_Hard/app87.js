@@ -1,6 +1,6 @@
 let assert = require('chai').assert;
 
-console.log('my bare node app');
+console.log('coding problem 87 [Hard]');
 
 const wrong1 = ['A N B', 'B NE C', 'C N A'];
 const wrong2 = ['A N B', 'B NE C', 'A S C'];
@@ -122,7 +122,7 @@ function validate(textRuleArr) {
 
 
 //testing
-let a, b, c;
+let a, b, c, f;
 //
 console.log('rules are: ' + wrong1.join());
 let w1Points = parse(wrong1);
