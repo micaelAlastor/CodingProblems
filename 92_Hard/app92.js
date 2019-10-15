@@ -6,10 +6,6 @@ let courses = {'CSC300': ['CSC100', 'CSC200'], 'CSC200': ['CSC100'], 'CSC100': [
 let wrong_courses_1 = {'CSC400': ['CSC500'], 'CSC300': ['CSC100', 'CSC200'], 'CSC200': ['CSC100'], 'CSC100': []};
 let wrong_courses_2 = {'CSC400': ['CSC300'], 'CSC300': ['CSC100', 'CSC200'], 'CSC200': ['CSC100', 'CSC400'], 'CSC100': []};
 
-function Course(prereqs){
-
-}
-
 function pushCourseWithFulfilledPrereq(coursesWithPrereq, order){
 	let fulfilled = 0;
 	for(let courseId in coursesWithPrereq) {
