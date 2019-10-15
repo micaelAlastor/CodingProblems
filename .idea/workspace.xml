@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="731ac216-0d73-4f84-931f-9c9ce93583ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/92_Hard/app92.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/92_Hard/desc92.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/87_Hard/app87.js" beforeDir="false" afterPath="$PROJECT_DIR$/87_Hard/app87.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/92_Hard/app92.js" beforeDir="false" afterPath="$PROJECT_DIR$/92_Hard/app92.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,19 +17,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/87_Hard/app87.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="122" column="60" selection-start-line="122" selection-start-column="60" selection-end-line="122" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/92_Hard/app92.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="576">
+              <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -39,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/92_Hard/desc92.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="45" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="45" />
+            <state relative-caret-position="72">
+              <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -74,8 +63,8 @@
         <option value="$PROJECT_DIR$/75_Hard/desc75.txt" />
         <option value="$PROJECT_DIR$/75_Hard/app75.js" />
         <option value="$PROJECT_DIR$/92_Hard/desc92.txt" />
-        <option value="$PROJECT_DIR$/92_Hard/app92.js" />
         <option value="$PROJECT_DIR$/87_Hard/app87.js" />
+        <option value="$PROJECT_DIR$/92_Hard/app92.js" />
       </list>
     </option>
   </component>
@@ -167,7 +156,7 @@
       <workItem from="1570434313233" duration="111000" />
       <workItem from="1570608348109" duration="18349000" />
       <workItem from="1570794199174" duration="15421000" />
-      <workItem from="1571150156597" duration="1633000" />
+      <workItem from="1571150156597" duration="6434000" />
     </task>
     <task id="LOCAL-00001" summary="first real commit">
       <created>1570794247941</created>
@@ -211,23 +200,37 @@
       <option name="project" value="LOCAL" />
       <updated>1571150289474</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="87 cosmetics">
+      <created>1571168183127</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571168183128</updated>
+    </task>
+    <task id="LOCAL-00008" summary="92 is relatively ez to solve but a bit harder to code properly">
+      <created>1571171898619</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1571171898619</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35514000" />
+    <option name="totallyTimeSpent" value="40315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24972677" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19398907" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49945354" visible="true" weight="0.31425485" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49945354" weight="0.31425485" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -251,7 +254,9 @@
     <MESSAGE value="79 was too ez" />
     <MESSAGE value="fixed 87 description" />
     <MESSAGE value="75 wasn't done in time. I'll return to it later" />
-    <option name="LAST_COMMIT_MESSAGE" value="75 wasn't done in time. I'll return to it later" />
+    <MESSAGE value="87 cosmetics" />
+    <MESSAGE value="92 is relatively ez to solve but a bit harder to code properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="92 is relatively ez to solve but a bit harder to code properly" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -259,11 +264,35 @@
         <watch expression="c.path.N" language="JavaScript" />
         <watch expression="startPoint.path[direction]" language="JavaScript" />
         <watch expression="localPath" language="JavaScript" />
+        <watch expression="coursesWithPrereq[courseId]" language="JavaScript" />
+        <watch expression="order" language="JavaScript" />
+        <watch expression="Object.keys(coursesWithPrereq).length" language="JavaScript" />
+        <watch expression="order.length" language="JavaScript" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>order.length</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Object.keys(coursesWithPrereq).length</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>order</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>coursesWithPrereq[courseId]</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>localPath</expression-string>
         <language-id>JavaScript</language-id>
@@ -342,24 +371,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/87_Hard/app87.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="122" column="60" selection-start-line="122" selection-start-column="60" selection-end-line="122" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/92_Hard/desc92.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="45" />
+        <state relative-caret-position="72">
+          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/92_Hard/app92.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/87_Hard/app87.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="122" column="60" selection-start-line="122" selection-start-column="60" selection-end-line="122" selection-end-column="60" />
+        <state relative-caret-position="576">
+          <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
         </state>
       </provider>
     </entry>
