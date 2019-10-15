@@ -120,7 +120,7 @@ function validate(textRuleArr) {
 	return result;
 }
 
-
+////////////////////////////////////////////////////////////
 //testing
 let a, b, c, f;
 //
